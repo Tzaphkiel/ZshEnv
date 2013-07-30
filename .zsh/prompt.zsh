@@ -4,14 +4,14 @@
 # PS2 secondary prompt: printed when shell needs more info for command (default: "%_> ")
 # PS3 selection prompt: used within a select loop (default: "?# ")
 # PS4 execution prompt: (default: "+")
-# ´  :ALT-171
-# ∑ : ALT-183
-# ª : ALT-187
+# ¬´  :ALT-171
+# ¬∑ : ALT-183
+# ¬ª : ALT-187
 
 #PROMPT="
 #${fg_lgray}[${fg_yellow}%(!.${fg_red}.)%n${fg_lgray}@${fg_yellow}${at_bold}%m${at_boldoff}${fg_lgray}]:${fg_cyan}%~${fg_white}
 #${fg_white}%#${at_normal} "
-PROMPT4=∑
+PROMPT4=¬∑
 
 PROMPT="${fg_lgray}%T [${fg_yellow}%(!.${fg_red}.)%n${fg_lgray}@${fg_yellow}${at_bold}%m${at_boldoff}:${fg_cyan}%~${fg_white}${fg_lgray}]-[${fg_green}%?${fg_lgray}] ${at_normal}"
 
@@ -20,6 +20,18 @@ PROMPT="${fg_lgray}%T [${fg_yellow}%(!.${fg_red}.)%n${fg_lgray}@${fg_yellow}${at
 # RPS1 displayed on the right hand side of the screen when PS1 is displayed on the left
 # RPS2 displayed on the right hand side of the screen when PS2 is displayed on the left
 #RPROMPT1="[${fg_green}%T${fg_white}]${at_normal}"
+
+# vcs_info init
+autoload -Uz vcs_info
+ 
+ zstyle ':vcs_info:*' stagedstr '%F{28}‚óè'
+ zstyle ':vcs_info:*' unstagedstr '%F{11}‚óè'
+ zstyle ':vcs_info:*' check-for-changes true
+ zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
+ zstyle ':vcs_info:*' enable git svn
+
+
+
 
 
 #======================================================================
@@ -44,10 +56,19 @@ function precmd() {
 
   print -Pn "\ek$SCREEN_TAB_NAME\e\\"      # screen title (in ^A")
   
-#  if [ ! "$CURRENT_UID" = "0" ]
-#  then  
-   scrCtrl
-#  fi  
+
+  #scrCtrl
+  if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+    zstyle ':vcs_info:*' formats "${fg_yellow}${at_bold}%b %c %u${at_normal}"
+  } else {
+    zstyle ':vcs_info:*' formats "${fg_yellow}${at_bold}%b %c %u ${fg_red}‚óè${at_normal}"
+  }  
+  vcs_info
+  if [ -z $vcs_info_msg_0_ ]; then
+    vcs_info_msg_0_="${fg_yellow}%D{%a,%b %d}"
+  fi
+  
+  export RPS1="${fg_white}[${fg_yellow}${vcs_info_msg_0_}${fg_white}]${at_normal}"
 }
 
 

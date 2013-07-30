@@ -1,35 +1,76 @@
+set langmenu=en_US.utf-8
+set t_Co=256                                                                
+set nocompatible
+
 set background=dark
 let g:zenburn_high_Contrast=1
 colors zenburn
-" :colorscheme pablo
 syntax enable
-set nocompatible
-set encoding=utf8
-"set modeline
-
+set encoding=utf-8
+scriptencoding utf-8
 
 set autoindent
 set smartindent
 set tabstop=2
-set shiftwidth=2
 set expandtab                                           " turn tab to space
+set shiftwidth=2
 set incsearch
 set nowrap
+set linebreak
+set showbreak=>>>
+set showmode
 set showcmd
+set smartcase
 set hlsearch
 set ignorecase                                  " ignore case when searching
 set ruler
+set ff=unix
+set nu
+set autochdir
+set shortmess=atI
+set scrolloff=3
 
 set statusline=%F%m%r%h%w\ %=%y\ POS=%v,%l\/%L\ \ %p%%
 set laststatus=2
 
-filetype on
-filetype plugin on
-set nu
+" mouse wheel scrolling in the terminal
+set ttymouse=xterm2
 
-" Work-around incomplete terminfo databases                                     
-" Particulalry useful when under `screen`, which may or may not be attached to  
-" a physical terminal capable of 256color mode.                                 
-"if match($TERMCAP, 'Co#256:') == 0 || match($TERMCAP, ':Co#256:') > 0           
-    set t_Co=256                                                                
-"endif 
+filetype plugin indent on
+
+" highlight current line and column
+set cursorline
+set cursorcolumn
+set display=lastline
+set wildmenu
+set noerrorbells
+
+if has('gui_running')
+  set clipboard=autoselect,unnamed
+  if has('unix')
+    if &diff
+      set guifont=DejaVu\ Sans\ Mono\ 8 
+    else
+      set guifont=DejaVu\ Sans\ Mono\ 10
+    endif
+  else
+    if &diff
+      set guifont=DejaVu_Sans_Mono:h8 
+    else
+      set guifont=DejaVu_Sans_Mono:h10
+    endif
+    au GUIEnter * simalt ~X
+  endif
+endif
+
+" use filler lines if one pane in the diff has new code
+set diffopt+=filler
+" ignore trailing whitespace
+set diffopt+=iwhite
+
+
+
+
+
+
+
