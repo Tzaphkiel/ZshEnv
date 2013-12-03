@@ -1,6 +1,7 @@
 #Aliases
 alias ls='ls --color'
 alias l='ls -lah'
+alias ll='ls -lh'
 alias lt='ls -larth'
 alias dh='dirs -v'
 
