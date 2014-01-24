@@ -1,9 +1,13 @@
+" terminal background must be #1f1f1f to match the zenburn background !
 set langmenu=en_US.utf-8
 set t_Co=256                                                                
 set nocompatible
 
 set background=dark
+let g:zenburn_alternate_Visual=1
 let g:zenburn_high_Contrast=1
+let g:zenburn_unified_CursorColumn = 1
+"let g:zenburn_force_dark_Background = 1
 colors zenburn
 syntax enable
 set encoding=utf-8
