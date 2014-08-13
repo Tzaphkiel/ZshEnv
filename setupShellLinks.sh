@@ -21,5 +21,6 @@ echo "Installing configuration of zsh, screen and vim..."
 ln -s $BASEDIR/.zshrc ~/.zshrc
 ln -s $BASEDIR/.screenrc ~/.screenrc
 ln -s $BASEDIR/.vimrc ~/.vimrc
+ln -s $BASEDIR/.scripts ~/.scripts
 
 echo "All done, exit (maybe logout) and re-start shell (z-shell) !"
