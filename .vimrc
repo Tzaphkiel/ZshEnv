@@ -1,4 +1,6 @@
 " terminal background must be #1f1f1f to match the zenburn background !
+" Equivalent RGBs are BG: (34,34,34) with FG: (254,254,254)
+
 set langmenu=en_US.utf-8
 ""set t_Co=256                                                                
 ""set nocompatible
