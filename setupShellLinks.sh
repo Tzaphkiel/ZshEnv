@@ -3,7 +3,7 @@ BASEDIR=$(pwd)
 # Cleaning home folder first
 # backing up existing links, files or data
 echo "Backing up existing files..."
-tar cfz shellFilesBackup.tar.gz ~/.vim ~/.zsh ~/.fonts ~/.zshrc ~/.screenrc ~/.vimrc 
+tar cfz shellFilesBackup.tar.gz ~/.vim ~/.zsh ~/.fonts ~/.zshrc ~/.screenrc ~/.vimrc
 
 # delete existing links, files or data
 echo "Removing existing files..."
@@ -22,5 +22,6 @@ ln -s $BASEDIR/.zshrc ~/.zshrc
 ln -s $BASEDIR/.screenrc ~/.screenrc
 ln -s $BASEDIR/.vimrc ~/.vimrc
 ln -s $BASEDIR/.scripts ~/.scripts
+ln -s $BASEDIR/.powerline ~/.powerline
 
 echo "All done, exit (maybe logout) and re-start shell (z-shell) !"

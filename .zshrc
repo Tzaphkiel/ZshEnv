@@ -44,7 +44,7 @@ source .zsh/optnstyles.zsh
 source .zsh/functions.zsh
 source .zsh/prompt.zsh
 source .zsh/bindings.zsh
-. /usr/share/zsh/site-contrib/powerline.zsh
+source .powerline/powerline/bindings/zsh/powerline.zsh
 
 
 #==========================================================================
