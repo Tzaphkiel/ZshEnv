@@ -37,13 +37,14 @@ eval `dircolors .zsh/dircolors-solarized.zsh`
 source .zsh/env.zsh 
 source .zsh/history.zsh 
 source .zsh/aliases.zsh
-#if [ "$CURRENT_SYSTEM" = "linux" ]; then
-#  source .zsh/aliases-linux.zsh
-#fi  
+if [ "$CURRENT_SYSTEM" = "linux" ]; then
+  source .zsh/aliases-linux.zsh
+fi  
 source .zsh/optnstyles.zsh
 source .zsh/functions.zsh
 source .zsh/prompt.zsh
 source .zsh/bindings.zsh
+. /usr/share/zsh/site-contrib/powerline.zsh
 
 
 #==========================================================================
