@@ -1,29 +1,18 @@
 " terminal background must be #1f1f1f to match the zenburn background !
 " Equivalent RGBs are BG: (34,34,34) with FG: (254,254,254)
 
-set langmenu=en_US.utf-8
-""set t_Co=256                                                                
-""set nocompatible
+execute pathogen#infect()                                     
 
-""" solarized using pathogen autoload
-set nocompatible                                           
-set t_Co=256
-call pathogen#infect()                                     
-syntax on                                                  
+set langmenu=en_US.utf-8
+set t_Co=256                                                                
+set nocompatible
+
+syntax enable                                                  
 set background=dark " dark | light "                       
 colorscheme solarized                                      
 filetype plugin on
-""" solarized using pathogen autoload
 
 
-
-""set background=dark
-""let g:zenburn_alternate_Visual=1
-""let g:zenburn_high_Contrast=1
-""let g:zenburn_unified_CursorColumn = 1
-"let g:zenburn_force_dark_Background = 1
-""colors zenburn
-""syntax enable
 set encoding=utf-8
 scriptencoding utf-8
 

@@ -8,6 +8,12 @@ else
 fi
 bindkey -v
 
+
+export LANGUAGE="en_GB"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/lib64:/usr/lib32"
+export PATH="${PATH}:/usr/bin"
+
+
 # pager
 export PAGER="less -R"
 

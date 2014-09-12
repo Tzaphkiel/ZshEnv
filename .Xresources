@@ -1,4 +1,6 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! drop in Solarized colorscheme for Xresources/Xdefaults
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 !!--------- ------- ---- -------  ----------- ---------- ----------- -----------
@@ -74,4 +76,42 @@
 
 !! white dark/light
 *color7:                S_base2
-*
+*color15:               S_base3
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! URxvt 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+URxvt.depth: 32
+!URxvt.foreground: [100]#F6F3E8
+!URxvt.background: [98]#1f1f1f
+!URxvt.background: [100]#000000
+!URxvt*.transparent: true
+!URxvt*.shading: 10
+
+!URxvt.colorBD : #ffffff
+!URxvt.colorUL : #cccc66
+
+URxvt*scrollBar: true
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: plain 
+URxvt*scrollbar: true
+
+URxvt*font: xft:DejaVu Sans Mono for Powerline::pixelsize=11:antialias=true:hinting=true
+URxvt*boldfont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=11:antialias=true:hinting=true
+URxvt.letterSpace	: 0
+URxvt.termName		: rxvt-256color
+
+URxvt.saveLines		: 12000
+
+!XFT
+Xft.lcdFilter	: lcddefault
+Xft.hintstyle	: hintslight
+Xft.hinting	: true
+Xft.antialias	: true
+Xft.rgba	: rgb
+
+
+
+
+
