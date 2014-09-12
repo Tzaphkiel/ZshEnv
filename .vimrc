@@ -12,6 +12,9 @@ set background=dark " dark | light "
 colorscheme solarized                                      
 filetype plugin on
 
+" automaticalle populate the g:airline_symbols dictionary with the powerline symbols
+let g:airline_powerline_fonts = 1
+let g:airline#extension#tabline#enabled = 1
 
 set encoding=utf-8
 scriptencoding utf-8
@@ -76,7 +79,8 @@ set diffopt+=filler
 set diffopt+=iwhite
 
 
-
+" map the Tagbartoggle to F8 function key
+nmap <F8> :TagbarToggle<CR>
 
 
 
