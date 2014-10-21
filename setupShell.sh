@@ -8,7 +8,13 @@ tar cfz ~/ZshEnv_ShellSetupBackup-${TS}.tar.gz ~/.vim ~/.zsh ~/.fonts ~/.zshrc ~
 
 # delete existing links, files or data
 echo "Removing existing files..."
-rm -rf $BASEDIR/.vim $BASEDIR/.zsh $BASEDIR/.fonts $BASEDIR/.zshrc $BASEDIR/.screenrc $BASEDIR/.vimrc $BASEDIR/.Xresources
+# FIXME: it removes too much: i.e. linked folder too and linked files... ???
+#rm -rf $BASEDIR/.vim $BASEDIR/.zsh $BASEDIR/.fonts $BASEDIR/.zshrc $BASEDIR/.screenrc $BASEDIR/.vimrc $BASEDIR/.Xresources
+
+
+echo "Initializing and updating sub-modules (GIT)"
+git submodule init                                                                                                                                                                               
+git submodule update
 
 
 # Folders with lib and refed files
