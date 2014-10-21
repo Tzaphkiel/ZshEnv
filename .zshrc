@@ -22,9 +22,9 @@ fi
 # allows only you to write data but anyone can only read
 if [ ! "$CURRENT_UID" = "0" ]
 then
-  umask 077 # completely private system
+  umask 0027 # 
 else  
-  umask 022 # completely private system
+  umask 0027 # i.e.: 777-027 = 0750 for folders
 fi
 
 
