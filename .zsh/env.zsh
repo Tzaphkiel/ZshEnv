@@ -23,7 +23,18 @@ DIRSTACKSIZE=30
 #TERM=xterm-256color
 
 
-export http_proxy=http://avdownload:n0v1rus@app-gw.ecb.de:8080  
-export https_proxy=https://avdownload:n0v1rus@app-gw.ecb.de:8080  
+# ======================
+# = Proxy configuration
+# ======================
+pxyHost=""
+pxyUser=""
+pxyPass=""
+pxyPort=""
+
+export http_proxy="http://$pxyUser:$pxyPass@$pxyHost:$pxyPort"
+export https_proxy="https://$pxyUser:$pxyPass@$pxyHost:$pxyPort"  
 export HTTP_PROXY=$http_proxy
 export HTTPS_PROXY=$https_proxy
+
+unset pxyHost pxyUser pxyPass pxyPort
+

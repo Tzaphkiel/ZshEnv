@@ -46,3 +46,35 @@ function renameScreenTab(){
   print -Pn "\ek$TABNAME\e\\"
 }  
 
+
+# Run various tmux commands from a standard location, starting a new
+# tmux session if run outside one.
+function tmuxLayout() {
+    local conf_dir="$HOME/.tmux_configs"
+
+    if [[ $# = 0 || -z $1 ]]; then
+  echo "Usage: $0 <configuration> [tmux new options]"
+  return 1
+    fi
+
+    local conf_file="$conf_dir/$1"
+    shift
+
+    if [[ ! -r $conf_file ]]; then
+  echo "No such configuration: $conf_file"
+  return 1
+    fi
+
+    if [[ -z $TMUX ]] ; then
+  # Pre tmux-1.2, Nicholas Marriott says: "new-session without
+  # -d implies attach and that stops further command
+  # processing."  So we source using a shell cmd inside tmux:
+  # tmux new-session "tmux new-window \\; source $conf_file"
+  #
+  # new-session does the right thing in tmux-1.2 and later:
+        tmux new-session "$@" \; source $conf_file
+    else
+        tmux source $conf_file
+    fi
+}
+
