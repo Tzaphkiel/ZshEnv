@@ -1,15 +1,21 @@
 " terminal background must be #1f1f1f to match the zenburn background !
+" Equivalent RGBs are BG: (34,34,34) with FG: (254,254,254)
+
+execute pathogen#infect()                                     
+
 set langmenu=en_US.utf-8
 set t_Co=256                                                                
 set nocompatible
 
-set background=dark
-let g:zenburn_alternate_Visual=1
-let g:zenburn_high_Contrast=1
-let g:zenburn_unified_CursorColumn = 1
-"let g:zenburn_force_dark_Background = 1
-colors zenburn
-syntax enable
+syntax enable                                                  
+set background=dark " dark | light "                       
+colorscheme solarized                                      
+filetype plugin on
+
+" automaticalle populate the g:airline_symbols dictionary with the powerline symbols
+let g:airline_powerline_fonts = 1
+let g:airline#extension#tabline#enabled = 1
+
 set encoding=utf-8
 scriptencoding utf-8
 
@@ -73,7 +79,8 @@ set diffopt+=filler
 set diffopt+=iwhite
 
 
-
+" map the Tagbartoggle to F8 function key
+nmap <F8> :TagbarToggle<CR>
 
 
 

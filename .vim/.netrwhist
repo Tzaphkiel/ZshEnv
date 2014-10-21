@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/etc/init'
-let g:netrw_dirhist_2='/home/leroyse/src/jonathongriggRF24/arduino/examples/nRF24_Arduino_as_hub'
-let g:netrw_dirhist_3='/home/leroyse/src/jonathongriggRF24/arduino/examples'
-let g:netrw_dirhist_4='/home/leroyse/src/jonathongriggRF24/arduino/examples/nRF24_sendto_hub'
-let g:netrw_dirhist_5='/home/leroyse/src/jonathongriggRF24'
-let g:netrw_dirhist_6='/home/leroyse/src/jonathongriggRF24/raspberrypi'

@@ -25,7 +25,7 @@ activity "%c activity -> %n%f %t" # tell me when stuff happens!
 
 # see http://www.manpagez.com/man/1/screen/
 # TABS: [%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}]
-# %?   %? : the part next to %? is displayed if % excape inside is expanded to non-empty string
+# %?  :the part to the next '%?' is displayed only if a '%' escape inside the part expands to a non-empty string 
 # zone stat: [%{Y}%l%{g}]
 # dateTime: [ %M %d %c ]
 # clear all attr, write on bright Red on black bg: %{=b kR}
@@ -33,7 +33,11 @@ activity "%c activity -> %n%f %t" # tell me when stuff happens!
 # clear all attr, color light blue: %{=b C}
 # color green     : %{g}
 
+#hardstatus alwayslastline
+#hardstatus string '%{gk}[ %H ][%=      %{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}    %= %{g}]%{=b C}'
+
 hardstatus alwayslastline '%{gk}[ %H ][%= %{wk}%?%-Lw%?%{=b kR}(%{-b g}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}]%{=b C}[ %M %d %c ]%{W}'
+#orig hardstatus alwayslastline '%{gk}[ %H ][%= %{wk}%?%-Lw%?%{=b kR}(%{-b g}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}]%{=b C}[ %M %d %c ]%{W}'
 
 windowlist string "%3n %t   %h%=%f"
 
