@@ -31,10 +31,10 @@ pxyUser=""
 pxyPass=""
 pxyPort=""
 
-export http_proxy="http://$pxyUser:$pxyPass@$pxyHost:$pxyPort"
-export https_proxy="https://$pxyUser:$pxyPass@$pxyHost:$pxyPort"  
-export HTTP_PROXY=$http_proxy
-export HTTPS_PROXY=$https_proxy
+#export http_proxy="http://$pxyUser:$pxyPass@$pxyHost:$pxyPort"
+#export https_proxy="https://$pxyUser:$pxyPass@$pxyHost:$pxyPort"  
+#export HTTP_PROXY=$http_proxy
+#export HTTPS_PROXY=$https_proxy
 
 unset pxyHost pxyUser pxyPass pxyPort
 

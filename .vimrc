@@ -51,6 +51,9 @@ filetype plugin indent on
 " highlight current line and column
 set cursorline
 set cursorcolumn
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set display=lastline
 set wildmenu
 set noerrorbells
