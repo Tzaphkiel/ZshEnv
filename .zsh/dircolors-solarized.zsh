@@ -68,11 +68,11 @@ TERM xterm-debian
 # Background 256 color coding:
 # 48;5;COLOR_NUMBER
 
-NORMAL 00;38;5;244 # no color code at all
+NORMAL 00;38;5;255 # no color code at all
 #FILE 00 # regular file: use no color at all
 RESET 0 # reset to "normal" color
-DIR 00;38;5;33 # directory 01;34
-LINK 01;38;5;33 # symbolic link. (If you set this to 'target' instead of a
+DIR 01;38;5;33 # directory 01;34
+LINK 01;38;5;31 # symbolic link. (If you set this to 'target' instead of a
  # numerical value, the color is as for the file pointed to.)
 MULTIHARDLINK 00 # regular file with more than one link
 FIFO 48;5;230;38;5;136;01 # pipe
@@ -88,7 +88,7 @@ STICKY_OTHER_WRITABLE 48;5;64;38;5;230 # dir that is sticky and other-writable (
 OTHER_WRITABLE 48;5;235;38;5;33 # dir that is other-writable (o+w) and not sticky
 STICKY 48;5;33;38;5;230 # dir with the sticky bit set (+t) and not other-writable
 # This is for files with execute permission:
-EXEC 01;38;5;64
+EXEC 01;38;5;161
 # List any file extensions like '.gz' or '.tar' that you would like ls
 # to colorize below. Put the extension, a space, and the color init string.
 # (and any comments you want to add after a '#')

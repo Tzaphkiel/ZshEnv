@@ -7,6 +7,8 @@ compinit
 autoload -U colors
 colors
 
+autoload -U zmv
+
 # spelling corrections for all arguments (also commands)
 setopt correctall
 

@@ -1,4 +1,5 @@
-# matches current input to history items
+# @see https://wiki.archlinux.org/index.php/zsh#Key_bindings
+# # matches current input to history items
 # bind to up arrow and down arrow
 # this will change your life and make traffic bearable
 # ^[[5~ PgUp
@@ -18,6 +19,8 @@ bindkey "\e[6~" history-beginning-search-forward
 #bindkey '^[[6~' history-beginning-search-forward # PgDn
 
 # Common terminal keybindings
-bindkey '\e[1~' beginning-of-line
-bindkey '\e[4~' end-of-line
+#bindkey '\e[1~' beginning-of-line
+#bindkey '\e[4~' end-of-line
+bindkey '^[[7~' beginning-of-line
+bindkey '^[[8~' end-of-line
 bindkey '\e[3~' delete-char-or-list
