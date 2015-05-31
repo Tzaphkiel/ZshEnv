@@ -20,7 +20,7 @@ fi
 
 # use default umask 022 
 # allows only you to write data but anyone can only read
-if [ ! "$CURRENT_UID" = "0" ]
+if [ ! "A$CURRENT_UID" = "A0" ]
 then
   umask 0027 # 
 else  
@@ -45,6 +45,12 @@ source .zsh/functions.zsh
 source .zsh/prompt.zsh
 source .zsh/bindings.zsh
 #source .powerline/powerline/bindings/zsh/powerline.zsh
+source .zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=red,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=yellow,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=magenta,bold'
 
 
 #==========================================================================

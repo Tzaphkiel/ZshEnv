@@ -13,7 +13,7 @@
 #${fg_white}%#${at_normal} "
 PROMPT4=·
 
-PROMPT="${fg_lgray}%T [${fg_yellow}%(!.${fg_red}.)%n${fg_lgray}@${fg_yellow}${at_bold}%m${at_boldoff}: ${fg_cyan}%~${fg_white}${fg_lgray}]-[${fg_green}%?${fg_lgray}] ${at_normal}"
+PROMPT="${fg_lgray}%T [${fg_green}%?${fg_lgray}] ${fg_yellow}%(!.${fg_red}.)%n${fg_lgray}@${fg_yellow}${at_bold}%m${at_boldoff} ${fg_cyan}%~${fg_white}${fg_lgray} %% ${at_normal}"
 
 # RPROMPT1-2 is the same as RPS1-2
 #
