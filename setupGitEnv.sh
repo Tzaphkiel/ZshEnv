@@ -4,7 +4,14 @@ git config --global difftool.prompt false
 git config --global alias.d difftool
 
 git config --global alias.lg "log --graph --abbrev-commit --decorate --pretty=format:'%C(bold cyan)%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset'"
+git config --global alias.a "add"
+git config --global alias.c "commit -v"
+git config --global alias.ca "commit -v -a"
+git config --global alias.cm "commit -m"
+git config --global alias.s "status"
+git config --global alias.st "status"
 
+git config --global credential.helper "cache --timeout=7200"
 git config --global push.default simple
 
 # ask the username and email address of the git user
