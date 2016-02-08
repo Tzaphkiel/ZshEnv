@@ -8,23 +8,19 @@ then
   TERMINFO=$HOME/.terminfo
   export TERMINFO
   TERM=xterm-256color
-  export TERM
   TERMCAP=`echo $TERMCAP | sed -e 's/Co#8/Co#256/g'`
   export TERMCAP
 else
   TERM=xterm
-  export TERM
 fi
+export TERM
 
-
-
-# use default umask 022 
-# allows only you to write data but anyone can only read
+# default umask 022 for most distrib
 if [ ! "A$CURRENT_UID" = "A0" ]
 then
-  umask 0027 # 
+  umask 0027 # i.e.: 777-027 = 0750 for folders: moderatly restrictive permissions for user
 else  
-  umask 0027 # i.e.: 777-027 = 0750 for folders
+  umask 0022 # make sure for root default permissive permissions are set ! 
 fi
 
 
