@@ -21,3 +21,4 @@ read -e -p "GIT global user.email: " GIT_EMAIL
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_USERNAME"
 
+# for windows only : git config --global core.whitespace cr-at-eol
