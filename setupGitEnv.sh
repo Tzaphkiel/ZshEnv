@@ -8,7 +8,7 @@ git config --global alias.a "add"
 git config --global alias.c "commit -v"
 git config --global alias.ca "commit -v -a"
 git config --global alias.cm "commit -m"
-git config --global alias.s "status"
+git config --global alias.s "status -s"
 git config --global alias.st "status"
 
 git config --global credential.helper "cache --timeout=7200"
