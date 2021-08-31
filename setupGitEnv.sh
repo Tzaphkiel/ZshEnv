@@ -13,7 +13,7 @@ git config --global alias.cm "commit -m"
 git config --global alias.s "status -s"
 git config --global alias.st "status"
 
-git config --global credential.helper "cache --timeout=7200"
+git config --global credential.helper cache
 git config --global push.default simple
 
 # ask the username and email address of the git user
